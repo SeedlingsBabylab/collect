@@ -2,7 +2,7 @@ import sys
 import os
 import shutil
 
-selected = ["_06"]
+selected = ["_06", "_07"]
 
 def crawl(start, out):
     for root, dirs, files in os.walk(start):
