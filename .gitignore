@@ -7,3 +7,7 @@ output
 combined_lena_sparsecode
 output2
 problems
+*.csv
+*.cha
+*.DS_Store
+*.opf

@@ -2,7 +2,7 @@ import sys
 import os
 import shutil
 
-ignore = ["old_chas", "old_files", "Old Files", "Old files", "Old_Files"]
+ignore = ["old_files", "Old Files", "Old files", "Old_Files", "old_opfs"]
 
 months = ["06"]
 
@@ -16,9 +16,9 @@ def correct_month(root):
 def crawl(start, out):
     for root, dirs, files in os.walk(start):
         if correct_month(root):
-            if "Coding" in root and "Audio_Annotation" in root and not any(x in root for x in ignore):
+            if "Coding" in root and "Video_Annotation" in root and not any(x in root for x in ignore):
                 for file in files:
-                    if file.endswith("sparse_code.cha"):
+                    if file.endswith("sparse_code.opf"):
                         print file
                         shutil.copy(os.path.join(root, file),
                                     os.path.join(out, file))
