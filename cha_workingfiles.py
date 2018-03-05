@@ -2,7 +2,7 @@ import os
 import sys
 from shutil import copy
 
-months = ["08"]
+months = ["09"]
 
 
 def correct_file(file):

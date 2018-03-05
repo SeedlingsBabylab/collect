@@ -11,3 +11,4 @@ problems
 *.cha
 *.DS_Store
 *.opf
+.vscode

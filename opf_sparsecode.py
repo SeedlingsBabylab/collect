@@ -4,14 +4,19 @@ import shutil
 
 ignore = ["old_files", "Old Files", "Old files", "Old_Files", "old_opfs"]
 
-months = ["06"]
+months = []
+
 
 def correct_month(root):
     split_root_begin = root.split("Home_Visit")[0][:-1]
     root_base = os.path.basename(split_root_begin)
-    if root_base[3:5] in months:
+
+    if months and root_base[3:5] in months:
+        return True
+    elif not months:
         return True
     return False
+
 
 def crawl(start, out):
     for root, dirs, files in os.walk(start):
@@ -22,6 +27,7 @@ def crawl(start, out):
                         print file
                         shutil.copy(os.path.join(root, file),
                                     os.path.join(out, file))
+
 
 if __name__ == "__main__":
 

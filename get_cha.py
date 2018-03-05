@@ -8,18 +8,17 @@ import shutil
 # this is an absolute path to
 start_dir = "/Volumes/pn-opus/Seedlings/Subject_Files"
 # this is a relative path (i.e. relative to wherever you launch the script)
-out_dir = "output"
-
+# out_dir = "/Volumes/pn-opus/Seedlings/Code/seedlings/annot_id/data/audio"
+out_dir = "all_cha"
 # arguments to specify a subset of files to collect
 subj = ""
-month = "15"
-
+month = ""
 
 
 # now we define a couple functions and variables:
 
 # we want to know to ignore these folders
-ignorable_folders = ["old_files", "old_chas", "Old Files"]
+ignorable_folders = ["old_files", "old_chas", "Old Files", "Old_Files"]
 
 
 # define a function called "walk_sf" which takes 1 argument (sf_dir)
@@ -60,7 +59,6 @@ def walk_sf(sf_dir):
                         print "copied:  {}".format(file)
 
 
-
 def check_if_right_subj_month(filename):
     # if subj and month are empty strings (i.e. we didn't set them at them
     # at the top of the script) we're going to say true for any file that's
@@ -79,7 +77,6 @@ def check_if_right_subj_month(filename):
         return True
     # otherwise return False
     return False
-
 
 
 

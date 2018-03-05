@@ -2,9 +2,9 @@ import sys
 import os
 import shutil
 
-ignore = ["old_chas", "old_files", "Old Files", "Old files", "Old_Files"]
+ignore = ["old_chas", "old_files", "Old Files", "Old files", "Old_Files", "Repair Files"]
 
-months = ["06"]
+months = ["17"]
 
 def correct_month(root):
     split_root_begin = root.split("Home_Visit")[0][:-1]
