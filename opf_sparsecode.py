@@ -31,7 +31,19 @@ def crawl(start, out):
 
 if __name__ == "__main__":
 
-    start = sys.argv[1]
+    # start = sys.argv[1]
+    # out = sys.argv[2]
+    #
+    # crawl(start, out)
+
+    opf_paths = sys.argv[1]
     out = sys.argv[2]
 
-    crawl(start, out)
+    with open(opf_paths, 'r') as f:
+        lines = f.readlines()
+
+    for line in lines:
+        line = line.strip()
+        for opf in os.listdir(line):
+            if opf.endswith(".opf"):
+                shutil.copy(os.path.join(line, opf), os.path.join(out, opf))
