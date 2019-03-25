@@ -44,6 +44,7 @@ if __name__ == "__main__":
 
     for line in lines:
         line = line.strip()
-        for opf in os.listdir(line):
-            if opf.endswith(".opf"):
-                shutil.copy(os.path.join(line, opf), os.path.join(out, opf))
+        if correct_month(line):
+            for opf in os.listdir(line):
+                if opf.endswith(".opf"):
+                    shutil.copy(os.path.join(line, opf), os.path.join(out, opf))
