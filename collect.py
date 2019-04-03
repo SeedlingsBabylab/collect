@@ -46,7 +46,7 @@ if __name__ == "__main__":
     if len(sys.argv)>3:
         month = sys.argv[3]
         if len(sys.argv) > 4:
-            extension = sys.argv[4]
+            extension = "."+sys.argv[4]
 
     with open(opf_paths, 'r') as f:
         lines = f.readlines()
