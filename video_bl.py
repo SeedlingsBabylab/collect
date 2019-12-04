@@ -4,7 +4,7 @@ import shutil
 
 ignore = ["old_chas", "old_files", "Old Files", "Old files", "Old_Files"]
 
-months = ["07"]
+months = ["13"]
 
 def correct_month(root):
     split_root_begin = root.split("Home_Visit")[0][:-1]
@@ -25,7 +25,7 @@ def crawl(start, out):
 
 if __name__ == "__main__":
 
-    start = sys.argv[1]
-    out = sys.argv[2]
+    start = sys.argv[1] #path/to/Subject_Files
+    out = sys.argv[2] #path/to/processed_and_old
 
     crawl(start, out)
