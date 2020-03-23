@@ -12,3 +12,6 @@ problems
 *.DS_Store
 *.opf
 .vscode
+*.swp
+*~
+.*
